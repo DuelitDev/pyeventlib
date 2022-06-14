@@ -15,7 +15,7 @@ setup(
     author_email="jyoon07dev@gmail.com",
     maintainer="DuelitDev",
     maintainer_email="jyoon07dev@gmail.com",
-    url="https://github.com/DuelitDev/pipcevent",
+    url="https://github.com/DuelitDev/pyeventlib",
     packages=find_packages(),
     python_requires=">=3.7",
     keywords=["event", "eventhandler", "pyevent", "pyevents", "pyeventlib"],
