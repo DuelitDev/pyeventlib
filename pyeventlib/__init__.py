@@ -1,4 +1,4 @@
-# pyeventlib (version: 1.0.0)
+# pyeventlib (version: 1.0.1)
 #
 # Copyright 2022. Kim Jae-yun all rights reserved.
 #
@@ -81,12 +81,12 @@ class EventHandler:
         self.__add__(function)
         return function
 
-    def __call__(self, sender: object, *args, **kwargs) -> asyncio.Future:
+    async def __call__(self, sender: object, *args, **kwargs) -> tuple:
         """
         Call functions in the queue.
 
         :param sender: The source of the event.
-        :return: Future
+        :return: Result of handlers return.
         """
         tasks = []
         for function in self._functions:
@@ -94,4 +94,4 @@ class EventHandler:
                 tasks.append(function(sender, *args, **kwargs))
                 continue
             function(sender, *args, **kwargs)
-        return asyncio.gather(*tasks)
+        return await asyncio.gather(*tasks)
