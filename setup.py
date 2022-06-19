@@ -7,7 +7,7 @@ with open("README.md", "r") as file:
 
 setup(
     name="pyeventlib",
-    version="1.0.0",
+    version="1.0.1",
     description="Use event handler simply.",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -32,4 +32,4 @@ setup(
 
 # python setup.py sdist
 # python setup.py bdist_wheel
-# twine upload ./dist/pyeventlib-1.0.0-py3-none-any.whl
+# twine upload ./dist/pyeventlib-1.0.1-py3-none-any.whl
