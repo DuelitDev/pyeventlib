@@ -1,4 +1,4 @@
-# pyeventlib (version: 1.1.1)
+# pyeventlib (version: 1.1.2)
 #
 # Copyright 2023. DuelitDev all rights reserved.
 #
@@ -29,10 +29,10 @@ class EventHandler:
         :param callback: function for the event
         :return: EventHandler
         """
-        if inspect.isfunction(callback):
+        if callable(callback):
             self._functions.append(callback)
             return self
-        raise TypeError("parameter 'callback' must be function.")
+        raise TypeError("parameter 'callback' must be callable.")
 
     def __sub__(self, callback: types.FunctionType) -> typing.Any:
         """
@@ -41,11 +41,11 @@ class EventHandler:
         :param callback: function for the event
         :return: EventHandler
         """
-        if inspect.isfunction(callback):
+        if callable(callback):
             if callback in self._functions:
                 self._functions.remove(callback)
             return self
-        raise TypeError("parameter 'callback' must be function.")
+        raise TypeError("parameter 'callback' must be callable.")
 
     async def __call__(self, sender: object, *args, **kwargs) -> tuple:
         """

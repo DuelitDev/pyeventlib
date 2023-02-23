@@ -1,4 +1,4 @@
-# pyeventlib (version: 1.1.1)
+# pyeventlib (version: 1.1.2)
 #
 # Copyright 2023. DuelitDev all rights reserved.
 #
