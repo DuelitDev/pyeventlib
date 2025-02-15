@@ -1,3 +1,15 @@
+# ⚠️ Deprecated Notice
+
+The `pyeventlib` library is now deprecated and no longer maintained.  
+
+---
+
+**Alternatives**:
+- [pyee](https://pypi.org/project/pyee/)
+- [blinker](https://pypi.org/project/blinker/)
+- [PyDispatcher](https://pypi.org/project/PyDispatcher/)
+
+
 # pyeventlib
 pyeventlib library is used to handle event in a simple way.  
 ## Install
