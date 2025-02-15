@@ -1,4 +1,12 @@
 from setuptools import find_packages, setup
+import warnings
+
+
+warnings.warn(
+    "The 'pyeventlib' library is deprecated and will no longer receive updates. "
+    "Please refer to the GitHub repository at https://github.com/DuelitDev/pyeventlib for details.",
+    DeprecationWarning
+)
 
 
 with open("README.md", "r") as file:
